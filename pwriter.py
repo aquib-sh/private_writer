@@ -5,7 +5,7 @@ import os
 
 class PWriter:
     def __init__(self, filename):
-        f_fullpath = os.path.join(os.getcwd(), filename)
+        f_fullpath = os.path.realpath(filename)
         f_mode = "w"
         if os.path.exists(f_fullpath):
             f_mode = "a"
