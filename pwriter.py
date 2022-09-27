@@ -15,7 +15,7 @@ class PWriter:
 
         self.clear_screen_fn = lambda: os.system("clear")       # fn to clear console
         if sys.platform == "win32":                             # Windows specific clear console fn
-            self.__clear_screen_fn = lambda: os.system("cls")
+            self.clear_screen_fn = lambda: os.system("cls")
 
         
     def write(self, line):
